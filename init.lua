@@ -726,6 +726,8 @@ require('lazy').setup({
           },
         },
 
+        require('lspconfig').clangd.setup {},
+
         require('lspconfig').yamlls.setup {
           settings = {
             yaml = {
