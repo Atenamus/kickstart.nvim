@@ -166,6 +166,7 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 vim.o.shiftwidth = 2
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -491,9 +492,6 @@ require('lazy').setup({
       'mason-org/mason-lspconfig.nvim',
       'WhoIsSethDaniel/mason-tool-installer.nvim',
 
-      -- nvim-java
-      'nvim-java/nvim-java',
-
       -- Useful status updates for LSP.
       { 'j-hui/fidget.nvim', opts = {} },
 
@@ -708,13 +706,6 @@ require('lazy').setup({
               -- diagnostics = { disable = { 'missing-fields' } },
             },
           },
-        },
-        require('java').setup {
-          -- Your custom jdtls settings goes here
-        },
-
-        require('lspconfig').jdtls.setup {
-          -- Your custom nvim-java configuration goes here
         },
 
         require('lspconfig').jsonls.setup {
@@ -963,6 +954,7 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+      -- require('mini.indentscope').setup()
       -- require('mini.tabline').setup {}
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
